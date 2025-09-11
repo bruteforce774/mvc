@@ -1,8 +1,8 @@
-import { model } from "./model.js";
-import { rollDie } from "./controller.js";
+import { model } from "./model.ts";
+import { rollDie } from "./controller.ts";
 
 export function updateView() {
-    const app = document.getElementById("app");
+    const app: HTMLElement | null = document.getElementById("app");
     app.replaceChildren();
     const dieDisplay = document.createElement("div");
     const roller = document.createElement("button");
